@@ -1,3 +1,41 @@
-<p>
-  articulo-list works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-5">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="h4">#</th>
+            <th class="h4">Name</th>
+            <th class="h4">Collection</th>
+            <th class="h4">Price ($USD)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let each_articulo of articulos">
+            <td class="col-1">
+              <dd><strong>{{each_articulo.id}}</strong></dd>
+            </td>
+            <td class="col-3">
+              <dd (click)="onSelected(each_articulo)">{{each_articulo.name}}</dd>
+            </td>
+            <td class="col-2">
+              <dd>{{each_articulo.collection}}</dd>
+            </td>
+            <td class="col-2">
+              <dd>{{each_articulo.price}}</dd>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+      Average Seasons: {{precioPromedio}}
+      </div>
+
+    </div>
+<!--
+    <div class="col-4" *ngIf="isSelected">
+      <app-articulo-detail [articuloDetail]="selectedArticulo"></app-articulo-detail>
+    </div>
+-->
+  </div>
+</div>

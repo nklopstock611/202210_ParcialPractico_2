@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Articulo } from '../articulo';
 
 @Component({
   selector: 'app-articulo-detail',
