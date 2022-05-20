@@ -28,7 +28,7 @@ export class ArticuloListComponent implements OnInit {
     for (let i = 0; i < articulos.length; i++) {
       precioTotal += articulos[i].price;
     }
-    this.precioPromedio = precioTotal / articulos.length;
+    this.precioPromedio = Math.round(precioTotal / articulos.length);
   }
 
   onSelected(articulo: Articulo): void {
