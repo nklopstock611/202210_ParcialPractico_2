@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Articulo } from '../articulo';
 
 @Component({
@@ -7,6 +7,8 @@ import { Articulo } from '../articulo';
   styleUrls: ['./articulo-detail.component.css']
 })
 export class ArticuloDetailComponent implements OnInit {
+
+  @Input() articuloDetail!: Articulo;
 
   constructor() { }
 
